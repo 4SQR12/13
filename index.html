@@ -2,6 +2,7 @@
 <html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أزور | خدمات التقويد السريع</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
@@ -103,7 +104,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -524,6 +525,78 @@
 
             .cart-icon:active {
                 transform: scale(0.95);
+            }
+        }
+
+        /* التنسيق الأساسي للمنتجات */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* تنسيق خاص للموبايل */
+        @media screen and (max-width: 768px) {
+            .products-grid {
+                display: block !important; /* إجبار العرض كـ block */
+                margin: 0;
+                padding: 1rem;
+            }
+
+            .product-card {
+                width: 100% !important;
+                display: block !important;
+                margin-bottom: 2rem !important;
+            }
+
+            /* تأكيد عدم وجود أي float أو position */
+            .product-card {
+                float: none !important;
+                position: static !important;
+            }
+
+            /* إزالة أي grid أو flex */
+            .products-grid {
+                grid-template-columns: none !important;
+                display: block !important;
+            }
+
+            /* تكبير حجم المحتوى */
+            .product-title {
+                font-size: 1.8rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .product-price {
+                font-size: 2.2rem !important;
+                margin: 1rem 0 !important;
+            }
+
+            .product-description {
+                font-size: 1.2rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .add-to-cart {
+                width: 100% !important;
+                padding: 1.2rem !important;
+                font-size: 1.3rem !important;
+            }
+        }
+
+        /* تأكيد إضافي للشاشات الصغيرة جداً */
+        @media screen and (max-width: 480px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .products-grid {
+                padding: 0.5rem;
+            }
+
+            .product-card {
+                margin-bottom: 1.5rem !important;
             }
         }
     </style>
