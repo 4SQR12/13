@@ -294,38 +294,30 @@
             }
 
             .products-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 2rem;
-                padding: 0.5rem;
+                width: 100%;
+                padding: 1rem;
             }
 
             .product-card {
-                padding: 2rem;
-                margin-bottom: 1rem;
-                transform: none !important;
-            }
-
-            .product-title {
-                font-size: 1.8rem;
-                text-align: center;
-            }
-
-            .product-price {
-                font-size: 2.5rem;
-                text-align: center;
-                margin: 1.5rem 0;
-            }
-
-            .product-description {
-                font-size: 1.2rem;
-                text-align: center;
+                width: 100%;
                 margin-bottom: 2rem;
+                padding: 2rem;
+                box-sizing: border-box;
             }
 
+            .product-card:last-child {
+                margin-bottom: 0;
+            }
+
+            .product-title,
+            .product-price,
+            .product-description,
             .add-to-cart {
-                padding: 1.5rem;
-                font-size: 1.3rem;
-                margin-top: 1rem;
+                width: 100%;
+                text-align: center;
             }
 
             .cart-modal {
